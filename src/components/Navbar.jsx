@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import React from "react";
 
 const navLinks = [
   { title: "Home", path: "/" },

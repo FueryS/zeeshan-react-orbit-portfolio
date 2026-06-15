@@ -1,5 +1,6 @@
 import ProjectCard from "../components/ProjectCard.jsx";
 import { projects } from "../data/portfolioData.js";
+import React from "react";
 
 function Projects() {
   return (
@@ -8,7 +9,9 @@ function Projects() {
         <p className="eyebrow">Projects</p>
         <h1>Selected builds across web, mobile, and full-stack systems.</h1>
         <p>
-          These projects are arranged to show range: MERN backends, responsive web pages, e-commerce flows, mobile SQLite apps, and UI-focused product thinking.
+          These projects are arranged to show range: MERN backends, responsive
+          web pages, e-commerce flows, mobile SQLite apps, and UI-focused
+          product thinking.
         </p>
       </div>
 

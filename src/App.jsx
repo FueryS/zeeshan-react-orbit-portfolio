@@ -9,6 +9,8 @@ import Projects from "./pages/Projects.jsx";
 import Skills from "./pages/Skills.jsx";
 import Contact from "./pages/Contact.jsx";
 
+import React from "react";
+
 function ScrollToTop() {
   const location = useLocation();
 

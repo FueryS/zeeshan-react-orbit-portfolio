@@ -1,4 +1,5 @@
 import { journey } from "../data/portfolioData.js";
+import React from "react";
 
 function JourneyPath() {
   return (
@@ -9,7 +10,12 @@ function JourneyPath() {
       </div>
 
       <div className="journey-map">
-        <svg className="journey-svg" viewBox="0 0 1100 700" preserveAspectRatio="none" aria-hidden="true">
+        <svg
+          className="journey-svg"
+          viewBox="0 0 1100 700"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
           <defs>
             <linearGradient id="journeyGradient" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="var(--lime)" />
@@ -28,7 +34,10 @@ function JourneyPath() {
         </svg>
 
         {journey.map((item, index) => (
-          <article className={`journey-node node-${index + 1}`} key={item.title}>
+          <article
+            className={`journey-node node-${index + 1}`}
+            key={item.title}
+          >
             <span>{item.year}</span>
             <h3>{item.title}</h3>
             <p>{item.description}</p>

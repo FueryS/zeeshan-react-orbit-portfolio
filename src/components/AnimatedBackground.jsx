@@ -1,3 +1,4 @@
+import React from "react";
 function AnimatedBackground() {
   return (
     <div className="animated-bg" aria-hidden="true">

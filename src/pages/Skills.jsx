@@ -1,14 +1,19 @@
 import SkillOrbit from "../components/SkillOrbit.jsx";
 import { skills } from "../data/portfolioData.js";
+import React from "react";
 
 function Skills() {
   return (
     <section className="shell page-pad inner-page">
       <div className="page-hero narrow">
         <p className="eyebrow">Skills</p>
-        <h1>Technical stack shaped around React, MERN, mobile apps, and creative tooling.</h1>
+        <h1>
+          Technical stack shaped around React, MERN, mobile apps, and creative
+          tooling.
+        </h1>
         <p>
-          The skill page uses orbit visuals to match the React-inspired design direction while keeping the content readable on small screens.
+          The skill page uses orbit visuals to match the React-inspired design
+          direction while keeping the content readable on small screens.
         </p>
       </div>
 

@@ -1,3 +1,5 @@
+import React from "react";
+
 function ProjectCard({ project, index }) {
   return (
     <article className="project-card" style={{ "--card-index": index }}>
@@ -16,13 +18,19 @@ function ProjectCard({ project, index }) {
 
       <div className="project-actions">
         {project.live && (
-          <a href={project.live} target="_blank" rel="noreferrer">Live</a>
+          <a href={project.live} target="_blank" rel="noreferrer">
+            Live
+          </a>
         )}
         {project.github && (
-          <a href={project.github} target="_blank" rel="noreferrer">Frontend / Repo</a>
+          <a href={project.github} target="_blank" rel="noreferrer">
+            Frontend / Repo
+          </a>
         )}
         {project.backend && (
-          <a href={project.backend} target="_blank" rel="noreferrer">Backend</a>
+          <a href={project.backend} target="_blank" rel="noreferrer">
+            Backend
+          </a>
         )}
       </div>
     </article>
