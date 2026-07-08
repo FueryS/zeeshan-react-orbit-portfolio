@@ -3,14 +3,14 @@ function HeroOrbit() {
   return (
     <div
       className="hero-orbit"
-      aria-label="Animated React themed orbit graphic"
+      aria-label="Animated crimson orbit graphic"
     >
       <svg viewBox="0 0 420 420" role="img">
         <defs>
           <linearGradient id="orbitGradient" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stopColor="var(--lime)" />
-            <stop offset="55%" stopColor="var(--white)" />
-            <stop offset="100%" stopColor="var(--purple)" />
+            <stop offset="0%" stopColor="var(--accent)" />
+            <stop offset="55%" stopColor="var(--gold)" />
+            <stop offset="100%" stopColor="var(--ivory)" />
           </linearGradient>
           <filter id="glow">
             <feGaussianBlur stdDeviation="6" result="coloredBlur" />

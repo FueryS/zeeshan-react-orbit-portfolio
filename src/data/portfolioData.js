@@ -5,7 +5,7 @@ export const profile = {
     "Frontend-focused MERN developer building responsive web apps, React Native apps, and creative UI systems.",
   location: "Mumbai, India",
   email: "sayyedzeeshan696@gmail.com",
-  phone: "Can't Disclose for Privecy reasons",
+  phone: "Can't disclose for privacy reasons",
   github: "https://github.com/FueryS",
   linkedin: "https://linkedin.com/in/sayyed-zeeshan-mp8086",
   summary:
@@ -104,44 +104,7 @@ export const projects = [
   },
 ];
 
-export const journey = [
-  {
-    year: "2020",
-    title: "SSC Foundation",
-    description:
-      "Completed Secondary School Certificate from Ramlingam Edu Foundation English High School & Junior College.",
-  },
-  {
-    year: "2023",
-    title: "Science HSC + Topper Recognition",
-    description:
-      "Completed HSC Science and was recognized among the top five highest-scoring students at KGN Classes, Govandi.",
-  },
-  {
-    year: "2023–2026",
-    title: "BSc Computer Science",
-    description:
-      "Completed Bachelor of Science in Computer Science at N.G. Acharya & D.K. Marathe College, Chembur.",
-  },
-  {
-    year: "2025",
-    title: "Inter-college Wins",
-    description:
-      "Won second prizes in Guess The Output, Reverse Coding, and Technical Quiz competitions.",
-  },
-  {
-    year: "2026",
-    title: "InAmigos Internship",
-    description:
-      "Started Creative Writing and Content Writing internship with InAmigos Foundation.",
-  },
-  {
-    year: "Now",
-    title: "Building Full Stack + Mobile Projects",
-    description:
-      "Creating MERN websites, React Native apps, AI-assisted workflows, and visually expressive frontend experiences.",
-  },
-];
+export { journeyItems as journey } from "./siteTheme.js";
 
 export const achievements = [
   "2nd Prize in Inter-College Guess The Output Competition at Techage Code Relay.",

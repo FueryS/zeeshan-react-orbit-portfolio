@@ -8,8 +8,17 @@ import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Skills from "./pages/Skills.jsx";
 import Contact from "./pages/Contact.jsx";
+import { applyThemeToRoot, portfolioTheme } from "./data/siteTheme.js";
 
 import React from "react";
+
+function ThemeController() {
+  useEffect(() => {
+    applyThemeToRoot(portfolioTheme);
+  }, []);
+
+  return null;
+}
 
 function ScrollToTop() {
   const location = useLocation();
@@ -24,6 +33,7 @@ function ScrollToTop() {
 function App() {
   return (
     <>
+      <ThemeController />
       <AnimatedBackground />
       <Navbar />
       <ScrollToTop />

@@ -8,13 +8,13 @@ import React from "react";
 function Home() {
   return (
     <>
-      <section className="hero shell page-pad">
+      <section className="hero home-hero shell page-pad">
         <div className="hero-copy">
           <p className="eyebrow">
-            React themed portfolio • Lime / Purple / White
+            Sekiro-inspired portfolio - Crimson / Gold / Ink
           </p>
           <h1>
-            Building <span>interactive frontend</span> stories with full-stack
+            Building <span>interactive frontend</span> stories with full stack
             logic.
           </h1>
           <p className="hero-description">{profile.headline}</p>
@@ -32,7 +32,9 @@ function Home() {
         <HeroOrbit />
       </section>
 
-      <section className="stats-grid shell">
+      <JourneyPath />
+
+      <section className="stats-grid shell section-space compact-stats">
         {stats.map((stat) => (
           <div className="stat-card" key={stat.label}>
             <strong>{stat.value}</strong>
@@ -40,8 +42,6 @@ function Home() {
           </div>
         ))}
       </section>
-
-      <JourneyPath />
 
       <section className="section-space shell">
         <div className="section-heading split-heading">
@@ -52,7 +52,7 @@ function Home() {
             </h2>
           </div>
           <Link className="text-link" to="/projects">
-            Explore all projects →
+            Explore all projects {">"}
           </Link>
         </div>
 
