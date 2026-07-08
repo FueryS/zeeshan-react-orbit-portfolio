@@ -876,8 +876,20 @@ h3 {
   overflow: hidden;
 }
 
-.skill-orbit-card svg {
+.skill-orbit-stage {
+  position: relative;
   width: min(100%, 520px);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.skill-orbit-stage svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
 
 .skill-ring {
@@ -905,19 +917,35 @@ h3 {
   letter-spacing: 0;
 }
 
-.orbit-badges span {
+.orbit-badges {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.orbit-badge {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 0;
+  height: 0;
+  transform: rotate(calc(var(--skill-index) * 25.7deg)) translateX(205px);
+  transform-origin: 0 0;
+}
+
+.orbit-badge-label {
+  position: absolute;
+  left: 0;
+  top: 0;
   padding: 8px 12px;
   border-radius: 999px;
   background: var(--ink);
   border: 1px solid var(--border);
   color: var(--white);
-  transform: rotate(calc(var(--skill-index) * 25.7deg)) translateX(205px)
-    rotate(calc(var(--skill-index) * -25.7deg));
+  transform: translate(-50%, -50%) rotate(calc(var(--skill-index) * -25.7deg));
   font-size: 0.78rem;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .skill-groups {
@@ -1297,9 +1325,11 @@ h3 {
     min-height: 390px;
   }
 
-  .orbit-badges span {
-    transform: rotate(calc(var(--skill-index) * 25.7deg)) translateX(145px)
-      rotate(calc(var(--skill-index) * -25.7deg));
+  .orbit-badge {
+    transform: rotate(calc(var(--skill-index) * 25.7deg)) translateX(145px);
+  }
+
+  .orbit-badge-label {
     font-size: 0.66rem;
   }
 
@@ -1328,7 +1358,7 @@ h3 {
     width: 100%;
   }
 
-  .orbit-badges span:nth-child(n + 9) {
+  .orbit-badge:nth-child(n + 9) {
     display: none;
   }
 }
