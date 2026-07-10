@@ -1,5 +1,22 @@
 import React from "react";
 
+/**
+ * Renders an individual project card showcasing title, tags, description,
+ * and links to live demo, frontend repository, and backend repository.
+ * 
+ * @component
+ * @param {Object} props - The component properties.
+ * @param {Object} props.project - The project data object.
+ * @param {string} props.project.title - The title of the project.
+ * @param {string} props.project.type - The project tech category/type.
+ * @param {string} props.project.description - The description of the project.
+ * @param {string[]} props.project.tags - Array of technology tags.
+ * @param {string} [props.project.live] - Optional live deployment URL.
+ * @param {string} [props.project.github] - Optional frontend/monorepo GitHub URL.
+ * @param {string} [props.project.backend] - Optional backend GitHub URL.
+ * @param {number} props.index - The 0-based index of the card in the list (used for staggered animation delay).
+ * @returns {React.ReactElement} The project card layout.
+ */
 function ProjectCard({ project, index }) {
   return (
     <article className="project-card" style={{ "--card-index": index }}>

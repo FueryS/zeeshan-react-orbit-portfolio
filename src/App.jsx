@@ -12,6 +12,13 @@ import { applyThemeToRoot, portfolioTheme } from "./data/siteTheme.js";
 
 import React from "react";
 
+/**
+ * A controller component that applies the global portfolio theme
+ * styles to the document root element when mounted.
+ * 
+ * @component
+ * @returns {null} Renders no UI elements.
+ */
 function ThemeController() {
   useEffect(() => {
     applyThemeToRoot(portfolioTheme);
@@ -20,6 +27,13 @@ function ThemeController() {
   return null;
 }
 
+/**
+ * A utility component that scrolls the window back to the top
+ * with a smooth animation whenever the current route/pathname changes.
+ * 
+ * @component
+ * @returns {null} Renders no UI elements.
+ */
 function ScrollToTop() {
   const location = useLocation();
 
@@ -30,6 +44,13 @@ function ScrollToTop() {
   return null;
 }
 
+/**
+ * The main application component that sets up the global controllers,
+ * layout (Navbar, Footer, Background), and routing structure.
+ * 
+ * @component
+ * @returns {React.ReactElement} The root app structure.
+ */
 function App() {
   return (
     <>

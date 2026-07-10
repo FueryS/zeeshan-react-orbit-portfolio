@@ -1,4 +1,11 @@
 import React from "react";
+/**
+ * Renders an animated SVG graphic representing a multi-ring orbit with glowing sparks
+ * and central "SZ" text branding.
+ * 
+ * @component
+ * @returns {React.ReactElement} The HeroOrbit component.
+ */
 function HeroOrbit() {
   return (
     <div

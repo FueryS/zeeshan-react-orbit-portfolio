@@ -88,6 +88,14 @@ export const journeyItems = [
 
 export const journeyMotionDirections = ["bottom", "right", "left"];
 
+/**
+ * Applies CSS custom properties (variables) defined in a theme configuration
+ * to the document's root element (`document.documentElement`).
+ * 
+ * @param {Object} [theme=portfolioTheme] - The theme configuration object containing CSS variables.
+ * @param {Object} theme.cssVariables - A key-value map of CSS custom properties (e.g., {"--accent": "#ff2f2f"}).
+ * @returns {void}
+ */
 export function applyThemeToRoot(theme = portfolioTheme) {
   if (typeof document === "undefined") {
     return;

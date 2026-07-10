@@ -5,6 +5,13 @@ import JourneyPath from "../components/JourneyPath.jsx";
 import { profile, projects, stats } from "../data/portfolioData.js";
 import React from "react";
 
+/**
+ * Renders the Home page component representing the portfolio landing page.
+ * Displays hero welcome, statistical overview, journey path timeline, and featured projects.
+ * 
+ * @component
+ * @returns {React.ReactElement} The Home page structure.
+ */
 function Home() {
   return (
     <>

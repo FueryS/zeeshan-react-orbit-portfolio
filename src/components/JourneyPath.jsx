@@ -13,14 +13,33 @@ import {
 } from "../data/siteTheme.js";
 
 /**
+ * Clamps a numerical value between a minimum and maximum bound.
  *
- * @param {number} value The number that needs to be clamped
- * @param {number} [min]  defaults to 0
- * @param {number} [max] defaults to 1
- * @returns
+ * @param {number} value - The number to clamp.
+ * @param {number} [min=0] - The lower bound.
+ * @param {number} [max=1] - The upper bound.
+ * @returns {number} The clamped numerical value.
  */
 const clamp = (value, min = 0, max = 1) => Math.min(Math.max(value, min), max);
 
+/**
+ * Calculates a single 2D coordinate along a cubic Bezier curve at a given time progress.
+ *
+ * @param {Object} start - The starting 2D coordinate.
+ * @param {number} start.x - The starting X coordinate.
+ * @param {number} start.y - The starting Y coordinate.
+ * @param {Object} controlA - The first control point coordinate.
+ * @param {number} controlA.x - The first control point X.
+ * @param {number} controlA.y - The first control point Y.
+ * @param {Object} controlB - The second control point coordinate.
+ * @param {number} controlB.x - The second control point X.
+ * @param {number} controlB.y - The second control point Y.
+ * @param {Object} end - The ending 2D coordinate.
+ * @param {number} end.x - The ending X coordinate.
+ * @param {number} end.y - The ending Y coordinate.
+ * @param {number} time - The normalized time parameter [0, 1] along the curve.
+ * @returns {Object} The calculated 2D point {x, y} at time `time`.
+ */
 function cubicPoint(start, controlA, controlB, end, time) {
   const inverse = 1 - time;
 
@@ -38,10 +57,30 @@ function cubicPoint(start, controlA, controlB, end, time) {
   };
 }
 
+/**
+ * Calculates the Euclidean distance between two 2D points.
+ *
+ * @param {Object} pointA - The first point {x, y}.
+ * @param {number} pointA.x - The first point X coordinate.
+ * @param {number} pointA.y - The first point Y coordinate.
+ * @param {Object} pointB - The second point {x, y}.
+ * @param {number} pointB.x - The second point X coordinate.
+ * @param {number} pointB.y - The second point Y coordinate.
+ * @returns {number} The distance between the two points.
+ */
 function distanceBetween(pointA, pointB) {
   return Math.hypot(pointB.x - pointA.x, pointB.y - pointA.y);
 }
 
+/**
+ * Approximates the arc length of a cubic Bezier curve by dividing it into segments.
+ *
+ * @param {Object} start - The starting point {x, y}.
+ * @param {Object} controlA - The first control point {x, y}.
+ * @param {Object} controlB - The second control point {x, y}.
+ * @param {Object} end - The ending point {x, y}.
+ * @returns {number} The approximated arc length of the Bezier curve.
+ */
 function cubicLength(start, controlA, controlB, end) {
   let length = 0;
   let previous = start;
@@ -55,6 +94,15 @@ function cubicLength(start, controlA, controlB, end) {
   return length;
 }
 
+/**
+ * Builds an SVG path string ('d') and marker progress values mapping node connections.
+ *
+ * @param {Object[]} points - Array of point coordinates {x, y} representing journey milestones.
+ * @returns {Object} An object containing:
+ *   - d {string}: The formatted SVG path commands.
+ *   - markerProgress {number[]}: Normalized relative progress of each point along the total path [0, 1].
+ *   - totalLength {number}: The total cumulative length of the drawn path.
+ */
 function buildJourneyPath(points) {
   if (!points.length) {
     return {
@@ -100,6 +148,14 @@ function buildJourneyPath(points) {
   };
 }
 
+/**
+ * Returns the animation entry motion direction for a specific journey item.
+ *
+ * @param {Object} item - The journey item configuration object.
+ * @param {string} [item.motion] - Optional specific motion direction (e.g. "left", "right").
+ * @param {number} index - The index of the item.
+ * @returns {string} The motion direction name (e.g. "bottom", "left", "right").
+ */
 function getMotionDirection(item, index) {
   return (
     item.motion ||
@@ -107,6 +163,13 @@ function getMotionDirection(item, index) {
   );
 }
 
+/**
+ * Renders the interactive, dynamically computed Journey Timeline path using
+ * responsive SVG lines, scroll-triggered visual progress, and observer-triggered card entrances.
+ * 
+ * @component
+ * @returns {React.ReactElement} The JourneyPath section element.
+ */
 function JourneyPath() {
   const mapRef = useRef(null);
   const markerRefs = useRef([]);

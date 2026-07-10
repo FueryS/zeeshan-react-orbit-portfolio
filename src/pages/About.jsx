@@ -2,6 +2,13 @@ import JourneyPath from "../components/JourneyPath.jsx";
 import { achievements, profile, training } from "../data/portfolioData.js";
 import React from "react";
 
+/**
+ * Renders the About page component, displaying professional summary,
+ * academic details, achievements list, training details, and the JourneyPath timeline.
+ * 
+ * @component
+ * @returns {React.ReactElement} The About page layout.
+ */
 function About() {
   return (
     <section className="shell page-pad inner-page">

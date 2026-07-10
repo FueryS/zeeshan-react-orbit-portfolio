@@ -10,9 +10,20 @@ const navLinks = [
   { title: "Contact", path: "/contact" },
 ];
 
+/**
+ * Renders the responsive navigation bar featuring the logo, links to pages,
+ * and a mobile hamburger menu toggle.
+ * 
+ * @component
+ * @returns {React.ReactElement} The header and navbar markup.
+ */
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  /**
+   * Closes the mobile navigation menu.
+   * @returns {void}
+   */
   const closeMenu = () => setIsOpen(false);
 
   return (

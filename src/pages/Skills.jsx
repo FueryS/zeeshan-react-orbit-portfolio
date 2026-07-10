@@ -2,6 +2,13 @@ import SkillOrbit from "../components/SkillOrbit.jsx";
 import { skills } from "../data/portfolioData.js";
 import React from "react";
 
+/**
+ * Renders the Skills page component, combining the SkillOrbit component
+ * and detailed categorized lists of tools, languages, and technical groups.
+ * 
+ * @component
+ * @returns {React.ReactElement} The Skills page layout.
+ */
 function Skills() {
   return (
     <section className="shell page-pad inner-page">

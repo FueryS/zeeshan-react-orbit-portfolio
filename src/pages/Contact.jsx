@@ -1,6 +1,13 @@
 import { useState } from "react";
 import React from "react";
 
+/**
+ * Renders the Contact page component containing contact details, profile links,
+ * and a controlled contact form that pre-populates email draft fields.
+ * 
+ * @component
+ * @returns {React.ReactElement} The Contact page structure.
+ */
 function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,6 +18,12 @@ function Contact() {
 
   const [error, setError] = useState("");
 
+  /**
+   * Event handler to update form input fields in the local state.
+   * 
+   * @param {React.ChangeEvent<HTMLInputElement|HTMLTextAreaElement>} event - The input change event.
+   * @returns {void}
+   */
   function handleChange(event) {
     const { name, value } = event.target;
 
@@ -20,6 +33,12 @@ function Contact() {
     }));
   }
 
+  /**
+   * Event handler for form submission, performing validation and opening the mail app.
+   * 
+   * @param {React.FormEvent<HTMLFormElement>} event - The form submit event.
+   * @returns {void}
+   */
   function handleSubmit(event) {
     event.preventDefault();
 

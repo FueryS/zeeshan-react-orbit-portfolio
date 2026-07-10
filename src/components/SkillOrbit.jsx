@@ -1,6 +1,13 @@
 import { skills } from "../data/portfolioData.js";
 import React from "react";
 
+/**
+ * Renders an interactive, React-styled orbit diagram mapping the developer's skills 
+ * to concentric rings alongside badge elements.
+ * 
+ * @component
+ * @returns {React.ReactElement} The visual SkillOrbit stage.
+ */
 function SkillOrbit() {
   const allSkills = Object.values(skills).flat();
 

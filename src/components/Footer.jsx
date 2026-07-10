@@ -1,6 +1,13 @@
 import { profile } from "../data/portfolioData.js";
 import React from "react";
 
+/**
+ * Renders the global footer component containing the brand name, description,
+ * and social contact links (GitHub, LinkedIn, Email).
+ * 
+ * @component
+ * @returns {React.ReactElement} The footer element.
+ */
 function Footer() {
   return (
     <footer className="footer shell">

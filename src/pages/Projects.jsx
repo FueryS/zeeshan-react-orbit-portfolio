@@ -2,6 +2,12 @@ import ProjectCard from "../components/ProjectCard.jsx";
 import { projects } from "../data/portfolioData.js";
 import React from "react";
 
+/**
+ * Renders the Projects page component showing all portfolio projects (web, mobile, games).
+ * 
+ * @component
+ * @returns {React.ReactElement} The Projects page layout.
+ */
 function Projects() {
   return (
     <section className="shell page-pad inner-page">
