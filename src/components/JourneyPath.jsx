@@ -12,8 +12,14 @@ import {
   portfolioTheme,
 } from "../data/siteTheme.js";
 
-const clamp = (value, min = 0, max = 1) =>
-  Math.min(Math.max(value, min), max);
+/**
+ *
+ * @param {number} value The number that needs to be clamped
+ * @param {number} [min]  defaults to 0
+ * @param {number} [max] defaults to 1
+ * @returns
+ */
+const clamp = (value, min = 0, max = 1) => Math.min(Math.max(value, min), max);
 
 function cubicPoint(start, controlA, controlB, end, time) {
   const inverse = 1 - time;
@@ -95,7 +101,10 @@ function buildJourneyPath(points) {
 }
 
 function getMotionDirection(item, index) {
-  return item.motion || journeyMotionDirections[index % journeyMotionDirections.length];
+  return (
+    item.motion ||
+    journeyMotionDirections[index % journeyMotionDirections.length]
+  );
 }
 
 function JourneyPath() {

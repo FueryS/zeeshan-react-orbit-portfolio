@@ -1,15 +1,15 @@
 export const profile = {
   name: "Sayyed Zeeshan Azaz",
-  role: "Aspiring Computer Scientist",
+  role: "Software Engineer and Web Developer",
   headline:
-    "Frontend-focused MERN developer building responsive web apps, React Native apps, and creative UI systems.",
+    "FullStack-focused MERN developer building responsive web apps, React Native apps, and creative UI systems.",
   location: "Mumbai, India",
   email: "sayyedzeeshan696@gmail.com",
   phone: "Can't disclose for privacy reasons",
   github: "https://github.com/FueryS",
   linkedin: "https://linkedin.com/in/sayyed-zeeshan-mp8086",
   summary:
-    "Computer Science student from N.G. Acharya & D.K. Marathe College with a strong foundation in programming, MERN development, React Native, UI/UX, and AI-assisted development workflows.",
+    "Computer Science student from Mumbai University with a strong foundation in programming, MERN development, React Native, UI/UX, and AI-assisted development workflows.",
 };
 
 export const stats = [
@@ -30,6 +30,8 @@ export const skills = {
     "WordPress",
     "SEO Tools",
   ],
+  "App Development": ["React Native", "Flutter", "SQLite", "REST API"],
+  "Game Dev": ["Unity 3D", "Unity 2D", "Substance Painter"],
   Languages: [
     "JavaScript",
     "TypeScript",
@@ -39,7 +41,7 @@ export const skills = {
     "CSS",
     "Tailwind",
   ],
-  "App Development": ["React Native", "Flutter", "SQLite", "REST API"],
+
   "Creative Tools": ["Figma", "Adobe", "Blender 3D", "Krita", "MS Office"],
   "Developer Tools": [
     "Git",
@@ -59,16 +61,6 @@ export const skills = {
 
 export const projects = [
   {
-    title: "Goal Window",
-    type: "MERN Full Stack",
-    description:
-      "A goal and task tracking platform with login, session tracking, custom backend, responsive UI, and a larger vision of becoming a goal-focused social platform.",
-    tags: ["React", "Node", "Express", "MongoDB", "Render", "Netlify"],
-    live: "https://gole-window.netlify.app/",
-    github: "https://github.com/FueryS/todo-app",
-    backend: "https://github.com/FueryS/todo-app-backend",
-  },
-  {
     title: "InAmigos Awareness Page",
     type: "HTML / CSS / JavaScript",
     description:
@@ -77,6 +69,42 @@ export const projects = [
     live: "https://inamigosfoundation-awareness-zee.netlify.app/",
     github: "https://github.com/FueryS/InAmigos-Awareness-Page",
   },
+  {
+    title: "Goal Window",
+    type: "MERN Full Stack",
+    description:
+      "A goal and task tracking platform with login, session tracking, custom backend, responsive UI, and a larger vision of becoming a goal-focused social platform. I am actively working on this project when ever I have time out of passion",
+    tags: ["React", "Node", "Express", "MongoDB", "Render", "Netlify"],
+    live: "https://gole-window.netlify.app/",
+    github: "https://github.com/FueryS/todo-app",
+    backend: "https://github.com/FueryS/todo-app-backend",
+  },
+  {
+    title: "Portfolio",
+    type: "Vite React",
+    description:
+      "My Portfolio tracking my journy and serving as my interactive resume, The values and theme is highly customisable, Offers custom SVG elements and complex mathamatics to decide its path on the fly",
+    tags: [
+      "SVG",
+      "react",
+      "Vite",
+      "Netlify",
+      "Portfolio",
+      "Modular",
+      "Expandable",
+    ],
+    live: "https://sayyed-zeeshan-portfolio.netlify.app/",
+    github: "https://github.com/FueryS/zeeshan-react-orbit-portfolio",
+  },
+  {
+    title: "Guide Of Oak",
+    type: "Unity 3D Game",
+    description:
+      "A 3D and 2.5D PC game that features code for Custom Physics code, State Machines and simple AI, offers Custom made models , material , animations and artworks",
+    tags: ["Unity", "3D", "2.5D", "Blender", "Substance Painter"],
+    github: "https://github.com/FueryS/guide-of-oak",
+  },
+
   {
     title: "E-Fitness",
     type: "MERN E-commerce",
