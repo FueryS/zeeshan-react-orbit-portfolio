@@ -61,6 +61,15 @@ export const skills = {
 
 export const projects = [
   {
+    title: "Resume-Mill",
+    type: "Next.js",
+    description:
+      "An innovative resume and portfolio builder that offers a smarter, more effective way to manage your career assets than Canva ever could.",
+    tags: ["Next.js", "CSS", "Inovative", "100% Free"],
+    live: "https://resume-mill.vercel.app/",
+    github: "https://github.com/FueryS/resume-mill",
+  },
+  {
     title: "InAmigos Awareness Page",
     type: "HTML / CSS / JavaScript",
     description:
